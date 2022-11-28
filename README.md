@@ -1,16 +1,14 @@
-# pokemon_flutter_app
+# Desenvolvimento de um aplicativo simples de visualização de Pokedex
 
-A new Flutter project.
+## Módulos a desenvolver: 
 
-## Getting Started
+- Uma tela simples de teste para introdução (hello world) - com um Input e Dialog
+- Tela de Loading (error_screen.dart)
+- Snackbar de mensagem de erro
+- Tela de listagem de Pokenons (pokemon_list.dart)
+- Navegação para visualização de detalhes da tela (pokemon_info.dart) - nome, altura, peso e foto maior 
+- Ajustes gerais de layout e design da aplicação
 
-This project is a starting point for a Flutter application.
+## Desafio proposto
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Na tela de detalhe do Pokemon, liste as próximas evoluções do Pokemon (caso tenha). Em seguida, ao clicar nestas próximas evoluções, direcionar para a página deste Pokemon.
