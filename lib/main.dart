@@ -16,8 +16,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Pokedex",
       theme: ThemeData(primarySwatch: Colors.red),
-      home:  HomeContainer(
-        repository: PokemonRepository(dio: Dio())
+      home: Scaffold(
+        appBar: AppBar(title: const Text("Pokedex")),
+        backgroundColor: Colors.white,
+        body: HomeContainer(
+          repository: PokemonRepository(dio: Dio())
+        ),
       )
     );
   }
