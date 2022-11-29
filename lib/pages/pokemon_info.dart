@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokemon_flutter_app/models/pokemon.dart';
 
-import '../consts/api.dart';
+//import '../consts/api.dart';
 
 class PokemonInfo extends StatelessWidget {
 
