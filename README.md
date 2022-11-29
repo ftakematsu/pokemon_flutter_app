@@ -1,5 +1,8 @@
 # Desenvolvimento de um aplicativo simples de visualização de Pokedex
 
+Executar com:
+flutter run -d chrome --web-renderer html
+
 ## Módulos a desenvolver: 
 
 - Uma tela simples de teste para introdução (hello world) - com um Input e Dialog
