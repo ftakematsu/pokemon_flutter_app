@@ -6,8 +6,8 @@ import 'package:pokemon_flutter_app/repository/pokemon_repository.dart';
 import 'example/hello_world.dart';
 
 void main() {
-  runApp(const HelloWorld());
-  //runApp(const MyApp());
+  //runApp(const HelloWorld());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
