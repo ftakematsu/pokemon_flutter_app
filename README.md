@@ -1,5 +1,9 @@
 # Desenvolvimento de um aplicativo simples de visualização de Pokedex
 
+Download do Flutter:
+
+https://docs.flutter.dev/get-started/install
+
 Executar o comando:
 
 flutter run --web-renderer html
