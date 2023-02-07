@@ -1,7 +1,8 @@
 # Desenvolvimento de um aplicativo simples de visualização de Pokedex
 
 Executar o comando:
-flutter run -d chrome --web-renderer html
+
+flutter run --web-renderer html
 
 ## Módulos a desenvolver: 
 
