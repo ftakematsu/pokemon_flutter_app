@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:pokemon_flutter_app/repository/interface_pokemon_repository.dart';
 
@@ -19,7 +18,24 @@ class HomeContainer extends StatelessWidget {
     return FutureBuilder<List<Pokemon>>(
       future: repository.getAllPokemons(), // Essencial para chamar a API
       builder: (context, snapshot) {
-        return const Text("Minha Pokedex");
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          // Ação quando a conexão com a API estiver se estabelecendo
+
+        }
+
+        if (snapshot.hasError) {
+          // Ação quando a conexão com a API der erro
+          
+        }
+
+        if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
+          // Ação quando a conexão com a API for concluída e tiver dados
+
+        }
+
+        return const Center(
+          child: Text("Minha Pokedex"),
+        );
       },
     );
   }
