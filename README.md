@@ -2,7 +2,7 @@
 
 Download do Flutter:
 
-https://docs.flutter.dev/get-started/install
+https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.7.1-stable.zip
 
 Executar o comando:
 
