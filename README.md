@@ -1,12 +1,11 @@
 # Desenvolvimento de um aplicativo simples de visualização de Pokedex
 
 Download do Flutter:
-
-https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.7.1-stable.zip
-
 Executar o comando:
 
-flutter run --web-renderer html
+flutter run pub get
+
+flutter run
 
 ## Módulos a desenvolver: 
 
