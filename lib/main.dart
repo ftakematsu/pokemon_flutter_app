@@ -1,4 +1,3 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:pokemon_flutter_app/pages/home_container.dart';
 import 'package:pokemon_flutter_app/repository/pokemon_repository.dart';
@@ -15,12 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Pokedex",
-      theme: ThemeData(primarySwatch: Colors.red),
+      theme: ThemeData(primarySwatch: Colors.red, useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(title: const Text("Pokedex")),
         backgroundColor: Colors.white,
         body: HomeContainer(
-          repository: PokemonRepository(dio: Dio())
+          repository: PokemonRepository()
         ),
       )
     );

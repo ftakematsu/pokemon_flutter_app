@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:pokemon_flutter_app/pages/pokemon_list.dart';
 import 'package:pokemon_flutter_app/repository/interface_pokemon_repository.dart';
 
 import '../models/pokemon.dart';
@@ -20,7 +22,7 @@ class HomeContainer extends StatelessWidget {
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           // Ação quando a conexão com a API estiver se estabelecendo
-
+          return const Center(child: CircularProgressIndicator());
         }
 
         if (snapshot.hasError) {
@@ -30,6 +32,7 @@ class HomeContainer extends StatelessWidget {
 
         if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
           // Ação quando a conexão com a API for concluída e tiver dados
+          return PokemonList(pokemonList: snapshot.data!);
 
         }
 
