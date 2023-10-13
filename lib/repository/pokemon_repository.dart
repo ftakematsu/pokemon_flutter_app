@@ -6,11 +6,11 @@ import '../consts/api.dart';
 
 class PokemonRepository implements IPokemonRepository {
 
-  final Dio dio;
+  late Dio dio;
 
-  PokemonRepository({
-    required this.dio
-  });
+  PokemonRepository() {
+    dio = Dio();
+  }
 
   @override
   Future<List<Pokemon>> getAllPokemons() async {
@@ -19,7 +19,8 @@ class PokemonRepository implements IPokemonRepository {
     );
     // Map<String, dynamic>
     final json = jsonDecode(response.data);
-    final list = json['pokemon'] as List<dynamic>; // Lista de Pokemons, ainda no formato Map
+    List<dynamic> list = json['pokemon']; // Lista de Pokemons, ainda no formato Map
+    print(list);
     // Método para converter a lista de Map em List<Pokemon>
     return list.map(
       (e) => Pokemon.fromMap(e)

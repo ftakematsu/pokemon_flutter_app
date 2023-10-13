@@ -1,22 +1,33 @@
-import 'package:flutter/cupertino.dart';
-import 'package:pokemon_flutter_app/repository/interface_pokemon_repository.dart';
+import 'package:flutter/material.dart';
+import 'package:pokemon_flutter_app/services/pokemon_service.dart';
 
 import '../models/pokemon.dart';
 
-class HomeContainer extends StatelessWidget {
+class HomeContainer extends StatefulWidget {
 
-  final IPokemonRepository repository;
+  const HomeContainer({super.key});
 
-  const HomeContainer({
-    Key? key,
-    required this.repository
-  }) : super(key: key);
+  @override
+  State<HomeContainer> createState() {
+    return _HomeContainer();
+  }
 
+}
+
+class _HomeContainer extends State<HomeContainer> {
+
+  late PokemonService service;
+
+  @override
+  initState() {
+    super.initState();
+    service = PokemonService();
+  }
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<List<Pokemon>>(
-      future: repository.getAllPokemons(), // Essencial para chamar a API
+      future: service.getPokemonList(), // Essencial para chamar a API
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           // Ação quando a conexão com a API estiver se estabelecendo

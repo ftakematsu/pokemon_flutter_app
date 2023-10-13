@@ -1,7 +1,5 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:pokemon_flutter_app/pages/home_container.dart';
-import 'package:pokemon_flutter_app/repository/pokemon_repository.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,13 +13,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Pokedex",
-      theme: ThemeData(primarySwatch: Colors.red),
+      theme: ThemeData(
+        useMaterial3: true
+      ),
       home: Scaffold(
         appBar: AppBar(title: const Text("Pokedex")),
         backgroundColor: Colors.white,
-        body: HomeContainer(
-          repository: PokemonRepository(dio: Dio())
-        ),
+        body: const HomeContainer(),
       )
     );
   }
