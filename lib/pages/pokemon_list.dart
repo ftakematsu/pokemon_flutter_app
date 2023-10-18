@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:pokemon_flutter_app/models/pokemon.dart';
+import 'package:pokemon_flutter_app/widgets/pokemon_details.dart';
 
 class PokemonList extends StatefulWidget {
 
@@ -36,6 +37,15 @@ class _PokemonList extends State<PokemonList> {
                 return ListTile(
                   leading: Image.network(pokemon.image),
                   title: Text(pokemon.name),
+                  trailing: const Icon(Icons.arrow_forward_ios_rounded),
+                  onTap:() {
+                    showModalBottomSheet(
+                      context: context, 
+                      builder: (context) {
+                        return PokemonDetails(pokemon: pokemon);
+                      },
+                    );
+                  },
                 );
               }
             )
