@@ -5,6 +5,7 @@ Para executar o projeto, siga os passos:
  - Executar os comandos:
 ``flutter run pub get`` para instalar as dependências.
 ``flutter run`` para executar (preferencialmente em um emulador Android ou iOS).
+`flutter run -d chrome --web-renderer html` para executar no Chrome.
 
 ## Módulos a desenvolver: 
 - Uma tela simples de teste para introdução (hello world) - com um Input e Dialog
